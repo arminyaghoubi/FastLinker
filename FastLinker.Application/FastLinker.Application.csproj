@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Shortener\Commands\" />
+    <Folder Include="Features\Shortener\Queries\" />
+  </ItemGroup>
+
 </Project>
