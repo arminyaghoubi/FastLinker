@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FastLinker.Infrastructure\FastLinker.Infrastructure.csproj" />
     <ProjectReference Include="..\FastLinker.Persistence\FastLinker.Persistence.csproj" />
   </ItemGroup>
 
