@@ -11,5 +11,6 @@ public static class PersistenceServiceRegistration
 {
     public static IServiceCollection AddPersistenceServices(this IServiceCollection services, IConfiguration configuration) =>
         services.AddDbContext<FastLinkerContext>(options => options.UseSqlServer(configuration.GetConnectionString("FastLinkerContext")))
-        .AddScoped<ILinkRepository, LinkRepository>();
+        .AddScoped<ILinkRepository, LinkRepository>()
+        .AddScoped<IShortLinkRepository, ShortLinkRepository>();
 }
