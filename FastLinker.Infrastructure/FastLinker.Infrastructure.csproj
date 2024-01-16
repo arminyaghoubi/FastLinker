@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FastLinker.Application\FastLinker.Application.csproj" />
+  </ItemGroup>
+
 </Project>
