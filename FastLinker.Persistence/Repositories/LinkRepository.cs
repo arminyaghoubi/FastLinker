@@ -2,6 +2,7 @@
 using FastLinker.Domain;
 using FastLinker.Persistence.DatabaseContexts;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace FastLinker.Persistence.Repositories;
 
