@@ -27,4 +27,11 @@ public class FastLinkerContext : DbContext
 
         return base.SaveChangesAsync(cancellationToken);
     }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(FastLinkerContext).Assembly);
+
+        base.OnModelCreating(modelBuilder);
+    }
 }
