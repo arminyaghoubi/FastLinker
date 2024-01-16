@@ -86,5 +86,14 @@ namespace FastLinker.Application.Resources {
                 return ResourceManager.GetString("InvalidUrl", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Url with Short Key {0} was Not Found..
+        /// </summary>
+        internal static string ShortKeyNotFound {
+            get {
+                return ResourceManager.GetString("ShortKeyNotFound", resourceCulture);
+            }
+        }
     }
 }

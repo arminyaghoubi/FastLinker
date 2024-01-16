@@ -21,6 +21,13 @@ public class LinkRepository : ILinkRepository
         await _context.SaveChangesAsync();
     }
 
+    public async Task<Link?> GetLinkByShortKeyAsync(string shortKey)
+    {
+        var shortLink = await _context.ShortLinks.Include(s => s.Link).FirstOrDefaultAsync(s => s.ShortKey == shortKey);
+
+        return shortLink?.Link;
+    }
+
     public async Task<Link?> GetLinkByUrlAsync(string url)
     {
         return await _context.Links.FirstOrDefaultAsync(l => l.Url == url);
