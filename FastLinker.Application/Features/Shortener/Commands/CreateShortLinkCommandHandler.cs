@@ -46,7 +46,7 @@ public class CreateShortLinkCommandHandler : IRequestHandler<CreateShortLinkComm
 
         if (request.Title is not null)
         {
-            var shortLink = await _shortLinkRepository.GetShortLinkByTitleAsync(request.Title);
+            var shortLink = await _shortLinkRepository.GetShortLinkByTitleAndUrlAsync(request.Title, link.Id);
 
             if (shortLink is null)
             {

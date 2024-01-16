@@ -20,8 +20,8 @@ public class ShortLinkRepository : IShortLinkRepository
         await _context.SaveChangesAsync();
     }
 
-    public async Task<ShortLink?> GetShortLinkByTitleAsync(string title)
+    public async Task<ShortLink?> GetShortLinkByTitleAndUrlAsync(string title, int linkId)
     {
-        return await _context.ShortLinks.FirstOrDefaultAsync(s => s.Title == title);
+        return await _context.ShortLinks.FirstOrDefaultAsync(s => s.Title == title && s.LinkId == linkId);
     }
 }
