@@ -126,4 +126,7 @@
   <data name="InvalidUrl" xml:space="preserve">
     <value>Invalid URL format.</value>
   </data>
+  <data name="ShortKeyNotFound" xml:space="preserve">
+    <value>Url with Short Key {0} was Not Found.</value>
+  </data>
 </root>
