@@ -11,15 +11,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{0CC2281A-623
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{CC4A57AF-2F47-468E-810F-1CDCB9FFFB77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastLinker.API", "FastLinker.API\FastLinker.API.csproj", "{370B4553-9BEC-4B45-A3FC-0C569462480A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastLinker.API", "FastLinker.API\FastLinker.API.csproj", "{370B4553-9BEC-4B45-A3FC-0C569462480A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastLinker.Domain", "FastLinker.Domain\FastLinker.Domain.csproj", "{19714576-908B-4EA3-88EA-132972690D31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastLinker.Domain", "FastLinker.Domain\FastLinker.Domain.csproj", "{19714576-908B-4EA3-88EA-132972690D31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastLinker.Application", "FastLinker.Application\FastLinker.Application.csproj", "{35E78078-493E-47BA-B5C8-35394CC551DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastLinker.Application", "FastLinker.Application\FastLinker.Application.csproj", "{35E78078-493E-47BA-B5C8-35394CC551DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastLinker.Persistence", "FastLinker.Persistence\FastLinker.Persistence.csproj", "{1B7D5995-0251-41B5-9A23-CC920487A9AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastLinker.Persistence", "FastLinker.Persistence\FastLinker.Persistence.csproj", "{1B7D5995-0251-41B5-9A23-CC920487A9AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastLinker.Infrastructure", "FastLinker.Infrastructure\FastLinker.Infrastructure.csproj", "{A1FAABC1-FCF3-45FF-A355-5E0CB27951AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastLinker.Infrastructure", "FastLinker.Infrastructure\FastLinker.Infrastructure.csproj", "{A1FAABC1-FCF3-45FF-A355-5E0CB27951AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{BFC59570-C251-4EB3-BF1A-9CE5AB46C46E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastLinker.UnitTest", "FastLinker.UnitTest\FastLinker.UnitTest.csproj", "{A0245019-CD75-4121-88E8-1CFE8351FD7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +51,10 @@ Global
 		{A1FAABC1-FCF3-45FF-A355-5E0CB27951AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1FAABC1-FCF3-45FF-A355-5E0CB27951AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1FAABC1-FCF3-45FF-A355-5E0CB27951AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0245019-CD75-4121-88E8-1CFE8351FD7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0245019-CD75-4121-88E8-1CFE8351FD7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0245019-CD75-4121-88E8-1CFE8351FD7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0245019-CD75-4121-88E8-1CFE8351FD7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +68,7 @@ Global
 		{35E78078-493E-47BA-B5C8-35394CC551DF} = {DDB2F613-9D39-48A7-B3C2-9B0F464A7913}
 		{1B7D5995-0251-41B5-9A23-CC920487A9AF} = {CC4A57AF-2F47-468E-810F-1CDCB9FFFB77}
 		{A1FAABC1-FCF3-45FF-A355-5E0CB27951AF} = {CC4A57AF-2F47-468E-810F-1CDCB9FFFB77}
+		{A0245019-CD75-4121-88E8-1CFE8351FD7D} = {BFC59570-C251-4EB3-BF1A-9CE5AB46C46E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AFD352F1-9745-413F-AE33-07B3BB45DA61}
