@@ -22,32 +22,32 @@ public class GetOriginalUrlQueryHandler : IRequestHandler<GetOriginalUrlQuery, G
 
     public async Task<GetOriginalUrlDto> Handle(GetOriginalUrlQuery request, CancellationToken cancellationToken)
     {
-        if (string.IsNullOrEmpty(request.shortKey))
+        if (string.IsNullOrEmpty(request.ShortKey))
         {
-            throw new NotFoundException(request.shortKey);
+            throw new NotFoundException(request.ShortKey);
         }
 
-        var shortLink = await _shortLinkRepository.GetShortLinkByShortKeyAsync(request.shortKey);
+        var shortLink = await _shortLinkRepository.GetShortLinkByShortKeyAsync(request.ShortKey);
 
         if (shortLink is null)
         {
-            throw new NotFoundException(request.shortKey);
+            throw new NotFoundException(request.ShortKey);
         }
 
-        var click = await _clickRepository.GetClickByIpAndShortKeyAsync(request.ip, shortLink.Id);
+        var click = await _clickRepository.GetClickByIpAndShortKeyAsync(request.IP, shortLink.Id);
 
         if (click is null)
         {
             click = new Click
             {
-                Ip = request.ip,
+                Ip = request.IP,
                 ShortLinkId = shortLink.Id,
                 IsActive = true
             };
             await _clickRepository.CreateClickAsync(click);
         }
 
-        var link = await _linkRepository.GetLinkByShortKeyAsync(request.shortKey);
+        var link = await _linkRepository.GetLinkByShortKeyAsync(request.ShortKey);
 
         return new GetOriginalUrlDto(link.Url);
     }
