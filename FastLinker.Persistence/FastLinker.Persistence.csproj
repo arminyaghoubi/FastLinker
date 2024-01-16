@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FastLinker.Application\FastLinker.Application.csproj" />
     <ProjectReference Include="..\FastLinker.Domain\FastLinker.Domain.csproj" />
   </ItemGroup>
 
