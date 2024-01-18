@@ -22,6 +22,7 @@ public class ClickRepository : IClickRepository
 
     public async Task<Click?> GetClickByIpAndShortKeyAsync(string ip, int shortLinkId)
     {
-        return await _context.Clicks.FirstOrDefaultAsync(c => c.Ip == ip && c.ShortLinkId == shortLinkId);
+        return await _context.Clicks.AsNoTracking()
+            .FirstOrDefaultAsync(c => c.Ip == ip && c.ShortLinkId == shortLinkId);
     }
 }
