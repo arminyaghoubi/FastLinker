@@ -22,11 +22,13 @@ public class ShortLinkRepository : IShortLinkRepository
 
     public async Task<ShortLink?> GetShortLinkByShortKeyAsync(string shortKey)
     {
-        return await _context.ShortLinks.FirstOrDefaultAsync(s => s.ShortKey == shortKey);
+        return await _context.ShortLinks.AsNoTracking()
+            .FirstOrDefaultAsync(s => s.ShortKey == shortKey);
     }
 
     public async Task<ShortLink?> GetShortLinkByTitleAndUrlAsync(string title, int linkId)
     {
-        return await _context.ShortLinks.FirstOrDefaultAsync(s => s.Title == title && s.LinkId == linkId);
+        return await _context.ShortLinks.AsNoTracking()
+            .FirstOrDefaultAsync(s => s.Title == title && s.LinkId == linkId);
     }
 }
